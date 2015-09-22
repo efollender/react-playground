@@ -1,0 +1,5 @@
+#!/bin/sh -e
+
+`npm bin`/eslint \
+  -f node_modules/eslint-friendly-formatter \
+  ./src

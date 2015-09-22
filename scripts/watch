@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+NODE_ENV=development \
+  `npm bin`/concurrent \
+    --kill-others \
+    "node --harmony ./src/js/webpack-server.js" \
+    "`npm bin`/supervisor -e js --harmony ./index.js" \
+    "npm run watch:server"
